@@ -1,6 +1,5 @@
 <template>
   <header>
-    <img src="../assets/logo.png" />
     <h1>Bienvenido a Pan Nacote Pastelerías</h1>
   </header>
 </template>

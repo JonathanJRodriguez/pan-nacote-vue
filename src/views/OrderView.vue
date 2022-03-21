@@ -1,5 +1,5 @@
 <template>
-  <div class="chef">
+  <div class="order">
     <HeaderMain />
     <FooterMain />
   </div>
@@ -11,7 +11,7 @@ import FooterMain from "@/components/Footer.vue";
 import HeaderMain from "@/components/Header.vue";
 
 export default {
-  name: "PremadeView",
+  name: "OrderView",
   components: {
     FooterMain,
     HeaderMain,

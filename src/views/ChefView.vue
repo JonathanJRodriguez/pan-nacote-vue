@@ -11,7 +11,7 @@ import FooterMain from "@/components/Footer.vue";
 import HeaderMain from "@/components/Header.vue";
 
 export default {
-  name: "HomeView",
+  name: "ChefView",
   components: {
     FooterMain,
     HeaderMain,

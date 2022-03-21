@@ -28,6 +28,12 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "chef" */ "../views/PremadeView.vue"),
   },
+  {
+    path: "/order",
+    name: "order",
+    component: () =>
+      import(/* webpackChunkName: "chef" */ "../views/OrderView.vue"),
+  },
 ];
 
 const router = createRouter({
