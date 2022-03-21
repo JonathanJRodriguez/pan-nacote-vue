@@ -18,9 +18,32 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: left;
   color: #2c3e50;
-  background-color: #7db8e5;
+  background-color: #ffbd89;
+  width: 100%;
+  height: 100%;
 }
 body {
   margin: 0;
+}
+h1 {
+  margin-top: 80px;
+  color: #ff8cee;
+  text-align: center;
+  -webkit-text-stroke: 1px #893985;
+  text-shadow: 0px 4px 4px #282828;
+}
+h2 {
+  margin-top: 40px;
+  margin-left: 20px;
+  color: white;
+  -webkit-text-stroke: 1px #893985;
+  text-shadow: 0px 4px 4px #282828;
+}
+h3 {
+  margin-top: 40px;
+  padding-left: 50px;
+  color: #ff8cee;
+  -webkit-text-stroke: 1px #893985;
+  text-shadow: 0px 4px 4px black;
 }
 </style>

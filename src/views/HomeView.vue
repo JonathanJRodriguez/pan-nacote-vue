@@ -3,7 +3,6 @@
     <HeaderMain />
     <MenuMain />
     <SugerenciasMain />
-    <FormularioMain />
     <FooterMain />
   </div>
 </template>
@@ -11,7 +10,6 @@
 <script>
 // @ is an alias to /src
 import FooterMain from "@/components/Footer.vue";
-import FormularioMain from "@/components/Formulario.vue";
 import HeaderMain from "@/components/Header.vue";
 import MenuMain from "@/components/Menu.vue";
 import SugerenciasMain from "@/components/Sugerencias.vue";
@@ -20,7 +18,6 @@ export default {
   name: "HomeView",
   components: {
     FooterMain,
-    FormularioMain,
     HeaderMain,
     MenuMain,
     SugerenciasMain,

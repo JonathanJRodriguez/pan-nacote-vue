@@ -1,5 +1,9 @@
 <template>
   <div>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
     <h2>¡Aqui podrá encontrar todo nuestro menú!</h2>
     <h3>Sabores de pan</h3>
     <ul>
@@ -17,10 +21,7 @@
       <li>Chispas de chocolate ....................................... $15</li>
       <li>Texto ....................................... $15</li>
       <li>Figuras de betún ....................................... $15</li>
-      <li>
-        Rebanadas de fruta (durazno, fresas, kiwi,
-        cerezas)....................................... $35
-      </li>
+      <li>Fruta ........................................ $35</li>
       <li>Hojuelas de chocolate ....................................... $45</li>
       <li>Imagen personalizada ....................................... $80</li>
       <li>Figurín de plástico ....................................... $120</li>
@@ -43,18 +44,24 @@ export default {
 </script>
 
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
 ul {
+  background-color: #8b7169;
+  width: 50%;
+  border-radius: 15px;
   list-style-type: none;
-  padding: 0;
+  margin-left: 30px;
+  padding: 15px;
+  color: #7be6dc;
+  font-weight: bold;
+  -webkit-text-stroke: 1px #56a19a;
+  text-shadow: 0px 0px 8px black;
 }
 li {
-  display: inline-block;
-  margin: 0 10px;
+  margin: 10px;
 }
-a {
-  color: #42b983;
+li:before {
+  font-family: "FontAwesome";
+  content: "\f1fd";
+  margin-right: 15px;
 }
 </style>

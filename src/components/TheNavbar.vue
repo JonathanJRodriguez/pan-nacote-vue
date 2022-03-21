@@ -22,7 +22,7 @@ nav {
   position: fixed;
   top: 0px;
   width: 100%;
-  background-color: #7db8e5;
+  background-image: linear-gradient(yellow, #ffbd89);
   align-content: center;
   padding-top: 20px;
   padding-bottom: 0;
@@ -40,6 +40,9 @@ nav a {
 nav a.router-link-exact-active {
   color: black;
   background-color: #aee77c;
+  background-image: linear-gradient(#aee77c, yellow);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 img {

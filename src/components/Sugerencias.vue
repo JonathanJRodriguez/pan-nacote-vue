@@ -4,17 +4,17 @@
     <dl>
       <dt>Pastel sabor Rojo ................................... $175</dt>
       <dd>
-        - Pan sabor fresa con betún color rojo pasión y rebanadas de fresa como
+        * Pan sabor fresa con betún color rojo pasión y rebanadas de fresa como
         adornos.
       </dd>
       <dt>Pastel Vocho tuneado ................................... $240</dt>
       <dd>
-        - Pan sabor naranja con betún verde chillón y una imagen del vocho
+        * Pan sabor naranja con betún verde chillón y una imagen del vocho
         tuneado de tus sueños.
       </dd>
       <dt>Pastel Maruchan con coca ................................... $245</dt>
       <dd>
-        - Pan sabor chocolate con betún blanco y una imagen de tu maruchan
+        * Pan sabor chocolate con betún blanco y una imagen de tu maruchan
         favorita con frutas mixtas de adorno.
       </dd>
     </dl>
@@ -31,18 +31,19 @@ export default {
 </script>
 
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
+dl {
+  background-color: #8b7169;
+  width: 50%;
+  border-radius: 15px;
   list-style-type: none;
-  padding: 0;
+  margin-left: 30px;
+  padding: 15px;
+  color: #7be6dc;
+  font-weight: bold;
+  -webkit-text-stroke: 1px #56a19a;
+  text-shadow: 0px 0px 8px black;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+dd {
+  margin: 10px 15px 20px;
 }
 </style>
