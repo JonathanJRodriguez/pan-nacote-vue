@@ -18,24 +18,53 @@
         <td>{{ $store.state.user.email }}</td>
         <td>
           <!--Esto abriría una pop up con la orden completa del cliente-->
-          <button @click="detail1">Ver detalles</button>
+          <button @click="dialogState1 = true">Ver detalles</button>
         </td>
         <td>
           <!--Esto abriría una pop up con la imagen adjuntada de referencia o el texto de la descripción del cliente-->
-          <button @click="detail2">Ver detalles</button>
+          <button @click="dialogState2 = true">Ver detalles</button>
         </td>
         <td>En preparación</td>
       </tr>
     </table>
+    <GDialog v-model="dialogState1">
+      <div class="dialog">
+        <h2>Dialog Content 1</h2>
+
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+    </GDialog>
+    <GDialog v-model="dialogState2">
+      <div class="dialog">
+        <h2>Dialog Content 2</h2>
+
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+    </GDialog>
   </div>
 </template>
 
 <script>
+import { GDialog } from "gitart-vue-dialog";
 export default {
-  name: "OrderTable",
-  methods: {
-    detail1() {},
-    detail2() {},
+  components: {
+    GDialog,
   },
+  name: "OrderTable",
+  data: () => ({
+    dialogState1: false,
+    dialogState2: false,
+  }),
 };
 </script>
+
+<style scoped>
+/*@import "https://cdn.jsdelivr.net/npm/gitart-vue-dialog@1.2.1/dist/style.css";*/
+.dialog {
+  padding: 30px 20px;
+}
+
+h2 {
+  margin: 0 0 20px;
+}
+</style>
