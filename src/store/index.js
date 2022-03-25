@@ -10,6 +10,7 @@ export default createStore({
     },
     order: {
       type: "",
+      chefOption: "",
     },
   },
   getters: {},
@@ -29,6 +30,9 @@ export default createStore({
     orderType(state, orderType) {
       state.order.type = orderType;
     },
+    chefOption(state, chefOption) {
+      state.order.chefOption = chefOption;
+    },
   },
   actions: {
     nameChange({ commit }, name) {
@@ -45,6 +49,9 @@ export default createStore({
     },
     orderType({ commit }, orderType) {
       commit("orderType", orderType);
+    },
+    chefOption({ commit }, chefOption) {
+      commit("chefOption", chefOption);
     },
   },
   modules: {},

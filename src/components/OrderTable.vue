@@ -18,11 +18,11 @@
         <td>{{ $store.state.user.email }}</td>
         <td>
           <!--Esto abriría una pop up con la orden completa del cliente-->
-          <a href=".\chefPage.html">{{ $store.state.order.type }}</a>
+          <button @click="detail1">Ver detalles</button>
         </td>
         <td>
           <!--Esto abriría una pop up con la imagen adjuntada de referencia o el texto de la descripción del cliente-->
-          <a href=".\chefPage.html">Ver descripción</a>
+          <button @click="detail2">Ver detalles</button>
         </td>
         <td>En preparación</td>
       </tr>
@@ -33,5 +33,9 @@
 <script>
 export default {
   name: "OrderTable",
+  methods: {
+    detail1() {},
+    detail2() {},
+  },
 };
 </script>
