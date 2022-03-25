@@ -1,6 +1,7 @@
 <template>
   <div class="chef">
     <HeaderMain />
+    <TheInventory />
     <OrderTable />
     <FooterMain />
   </div>
@@ -11,6 +12,7 @@
 import FooterMain from "@/components/Footer.vue";
 import HeaderMain from "@/components/Header.vue";
 import OrderTable from "@/components/OrderTable.vue";
+import TheInventory from "@/components/TheInventory.vue";
 
 export default {
   name: "ChefView",
@@ -18,6 +20,7 @@ export default {
     FooterMain,
     HeaderMain,
     OrderTable,
+    TheInventory,
   },
 };
 </script>

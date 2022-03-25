@@ -84,8 +84,8 @@
       <input type="color" id="sel-color" name="sel-color" />
       <br />
       <label for="descripcion"
-        >Describe con detalle como te gustaría que se viera tu pastel o adjunta
-        una imagen de referencia:</label
+        >Describe con detalle como te gustaría que se viera tu pastel y/o
+        adjunta una imagen de referencia:</label
       ><br />
       <input
         type="text"
@@ -94,13 +94,12 @@
         size="300"
         width="50"
       /><br />
+      <input type="file" id="descripcionimg" name="descripcionimg" /><br />
     </div>
-    <input type="file" id="descripcionimg" name="descripcionimg" /><br />
     <br />
     <p>Total:</p>
-    <p>$150.00</p>
-    <input type="submit" value="Confirmar y Pagar" />
-    <input type="reset" value="Comenzar de nuevo" />
+    <p class="totalPrice">$150.00</p>
+    <button>Confirmar y pagar</button>
   </div>
 </template>
 
@@ -174,5 +173,8 @@ li {
 }
 a {
   color: #42b983;
+}
+.totalPrice {
+  font-size: 24pt;
 }
 </style>

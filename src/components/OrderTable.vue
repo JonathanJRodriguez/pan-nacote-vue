@@ -27,18 +27,28 @@
         <td>En preparación</td>
       </tr>
     </table>
-    <GDialog v-model="dialogState1">
+    <GDialog v-model="dialogState1" max-width="400px" scrollable>
       <div class="dialog">
-        <h2>Dialog Content 1</h2>
-
-        <p>Lorem ipsum dolor sit amet.</p>
+        <h2>Detalles del pedido</h2>
+        <div class="content">
+          <p>Tipo de pedido: Personalizado</p>
+          <p>Sabor de pan: Fresa, Chocolate</p>
+          <p>Adornos: Fresas, figuras de betún</p>
+          <p>Texto personalizado: Feliz cumpleaños</p>
+          <p>Color de betún: RGB(0,171,232)</p>
+          <div style="background-color: rgb(0, 171, 232)">.</div>
+        </div>
       </div>
     </GDialog>
-    <GDialog v-model="dialogState2">
+    <GDialog v-model="dialogState2" max-width="800px" scrollable>
       <div class="dialog">
-        <h2>Dialog Content 2</h2>
-
-        <p>Lorem ipsum dolor sit amet.</p>
+        <h2>Descripción del pedido</h2>
+        <div class="content">
+          <h3>Descripción del cliente:</h3>
+          <p>Quiero un pastel con temática de Frozen como el de la imágen</p>
+          <h3>Imagen Adjuntada:</h3>
+          <img src="../assets/client1.jpg" width="300" />
+        </div>
       </div>
     </GDialog>
   </div>
@@ -59,9 +69,22 @@ export default {
 </script>
 
 <style scoped>
-/*@import "https://cdn.jsdelivr.net/npm/gitart-vue-dialog@1.2.1/dist/style.css";*/
+/* @import "https://cdn.jsdelivr.net/npm/gitart-vue-dialog@1.2.1/dist/style.css"; */
+
 .dialog {
+  background-color: #ffbd89;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.content {
+  border-radius: 10px;
+  background-color: white;
   padding: 30px 20px;
+  overflow: auto;
+  margin-bottom: 30px;
 }
 
 h2 {
