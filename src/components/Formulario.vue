@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="formDiv">
     <h1>Haz aqui tu pedido!</h1>
-    <p>Datos de contacto.</p>
+    <h3>Datos de contacto.</h3>
     <label for="fname">Nombre:</label><br />
     <input type="text" v-model="nameChange" placeholder="John" /><br />
     <label for="lname">Apellido:</label><br />
@@ -10,9 +10,9 @@
     <input type="email" v-model="email" placeholder="cliente@email.com" /><br />
     <label for="phone">Teléfono:</label><br />
     <input type="number" v-model="phone" placeholder="5512345678" /><br />
-    <p>
+    <h3>
       Elige una de las sugerencias del pastelero o personaliza tu propio pastel!
-    </p>
+    </h3>
     <input type="radio" v-model="tipoPedido" value="sug-chef" />
     <label for="sug-chef">Sugerencia del pastelero</label><br />
     <input type="radio" v-model="tipoPedido" value="custom" />
@@ -41,12 +41,13 @@
       <input type="checkbox" id="sabor6" name="sabor6" value="tresleches" />
       <label for="sabor6">Tres Leches</label>
       <br />
-      <p>Elige los adornos de tu pastel:</p>
+      <h3>Elige los adornos de tu pastel:</h3>
       <input type="checkbox" id="adorno1" name="adorno1" value="ch-chocolate" />
       <label for="adorno1">Chispas de chocolate</label><br />
-      <input type="checkbox" id="adorno2" name="adorno2" value="texto" />
+      <input type="checkbox" />
       <label for="adorno2">Texto</label>
       <input
+        v-show="checked"
         type="text"
         id="adorno2txt"
         name="adornor2txt"
@@ -75,7 +76,7 @@
       <input type="checkbox" id="adorno7" name="adorno7" value="figura" />
       <label for="adorno6">Figurín de plástico</label>
       <br />
-      <p>Elige el color del betún:</p>
+      <h3>Elige el color del betún:</h3>
       <input type="radio" id="blanco" name="betun" value="blanco" />
       <label for="blanco">Blanco</label><br />
       <input type="radio" id="color" name="betun" value="color" />
@@ -87,25 +88,31 @@
         >Describe con detalle como te gustaría que se viera tu pastel y/o
         adjunta una imagen de referencia:</label
       ><br />
-      <input
-        type="text"
-        id="descripcion"
-        name="descripcion"
-        size="300"
-        width="50"
-      /><br />
+      <textarea
+        class="userDesc"
+        maxlength="300"
+        placeholder="Escriba aqui su descripción..."
+      ></textarea
+      ><br />
       <input type="file" id="descripcionimg" name="descripcionimg" /><br />
     </div>
     <br />
-    <p>Total:</p>
-    <p class="totalPrice">$150.00</p>
-    <button>Confirmar y pagar</button>
+    <div class="totalDiv">
+      <h2>Total:</h2>
+      <p class="totalPrice">$150.00</p>
+      <button>Confirmar y pagar</button>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: "FormularioMain",
+  data() {
+    return {
+      checked: true,
+    };
+  },
   computed: {
     nameChange: {
       get() {
@@ -160,21 +167,41 @@ export default {
 </script>
 
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+.formDiv {
+  margin: 40px;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+
 .totalPrice {
   font-size: 24pt;
+}
+
+label {
+  margin-right: 20px;
+}
+
+input {
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.userDesc {
+  width: 90%;
+  height: 200px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  resize: none;
+}
+
+.totalDiv {
+  padding: 0;
+  text-align: center;
+}
+
+.totalDiv button {
+  background-color: green;
+  border-radius: 5px;
+  padding: 15px;
+  color: white;
+  font-size: 20px;
 }
 </style>
