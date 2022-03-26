@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mainDiv">
     <h2>Lista de pedidos</h2>
     <table style="width: 100%">
       <tr>
@@ -70,6 +70,9 @@ export default {
 
 <style scoped>
 /* @import "https://cdn.jsdelivr.net/npm/gitart-vue-dialog@1.2.1/dist/style.css"; */
+.mainDiv {
+  margin: 40px;
+}
 
 .dialog {
   background-color: #ffbd89;
@@ -81,13 +84,36 @@ export default {
 
 .content {
   border-radius: 10px;
-  background-color: white;
+  background-color: #8b7169;
   padding: 30px 20px;
   overflow: auto;
   margin-bottom: 30px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
 }
 
 h2 {
   margin: 0 0 20px;
+}
+
+table {
+  width: 50%;
+  background-color: #8b7169;
+  border-radius: 10px;
+  border-collapse: collapse;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+}
+
+td,
+th {
+  padding: 6px;
+  border: 1px solid #ddd;
+}
+
+th {
+  font-size: 20px;
 }
 </style>
