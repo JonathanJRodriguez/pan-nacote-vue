@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>Esto es lo que está disponible actualmente</h2>
-    <div>
+    <div class="tableDiv">
       <h3>Sabores de pan</h3>
       <table>
         <tr>
@@ -34,7 +34,7 @@
         </tr>
       </table>
     </div>
-    <div>
+    <div class="tableDiv">
       <h3>Adornos</h3>
       <table>
         <tr>
@@ -75,7 +75,7 @@
         </tr>
       </table>
     </div>
-    <div>
+    <div class="tableDiv">
       <h3>Consumibles</h3>
       <table>
         <tr>
@@ -125,7 +125,30 @@ export default {
 </script>
 
 <style scoped>
+.tableDiv {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 table {
-  background-color: rgb(84, 137, 184);
+  width: 50%;
+  background-color: #8b7169;
+  border-radius: 10px;
+  border-collapse: collapse;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+}
+
+td,
+th {
+  padding: 6px;
+  border: 1px solid #ddd;
+}
+
+th {
+  font-size: 20px;
 }
 </style>
