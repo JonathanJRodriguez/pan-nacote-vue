@@ -24,6 +24,7 @@ export default {
 }
 body {
   margin: 0;
+  padding-top: 10px;
 }
 h1 {
   margin-top: 80px;

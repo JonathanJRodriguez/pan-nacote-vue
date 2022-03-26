@@ -1,5 +1,18 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1>Contacto</h1>
+    <FooterMain />
   </div>
 </template>
+
+<script>
+// @ is an alias to /src
+import FooterMain from "@/components/Footer.vue";
+
+export default {
+  name: "AboutView",
+  components: {
+    FooterMain,
+  },
+};
+</script>
