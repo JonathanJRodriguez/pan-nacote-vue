@@ -12,6 +12,110 @@ export default createStore({
       type: "",
       chefOption: "",
     },
+    inventory: {
+      flavors: [
+        {
+          name: "Fresa",
+          qty: 10,
+          price: 100,
+        },
+        {
+          name: "Chocolate",
+          qty: 10,
+          price: 100,
+        },
+        {
+          name: "Vainilla",
+          qty: 10,
+          price: 100,
+        },
+        {
+          name: "Cajeta",
+          qty: 10,
+          price: 100,
+        },
+        {
+          name: "Naranja",
+          qty: 10,
+          price: 100,
+        },
+        {
+          name: "Tres Leches",
+          qty: 10,
+          price: 120,
+        },
+        {
+          name: "Combinado 2",
+          qty: 10,
+          price: 150,
+        },
+        {
+          name: "Combinado 3",
+          qty: 10,
+          price: 180,
+        },
+      ],
+      toppings: [
+        {
+          name: "Chispas de chocolate",
+          qty: 20,
+          price: 15,
+        },
+        {
+          name: "Rebanadas de durazno",
+          qty: 35,
+          price: 35,
+        },
+        {
+          name: "Rebanadas de fresa",
+          qty: 30,
+          price: 35,
+        },
+        {
+          name: "Rebanadas de kiwi",
+          qty: 28,
+          price: 35,
+        },
+        {
+          name: "Rebanadas de cereza",
+          qty: 16,
+          price: 35,
+        },
+        {
+          name: "Hojuelas de chocolate",
+          qty: 20,
+          price: 45,
+        },
+        {
+          name: "Hojas comestibles",
+          qty: 80,
+          price: 80,
+        },
+        {
+          name: "Figurín de plástico",
+          qty: 10,
+          price: 120,
+        },
+      ],
+      covers: [
+        {
+          name: "Betún",
+          qty: 10,
+          color: {
+            white: {
+              name: "Blanco",
+              rgb: "255,255,255",
+              price: 30,
+            },
+            custom: {
+              name: "Cualquier color",
+              rgb: "",
+              price: 40,
+            },
+          },
+        },
+      ],
+    },
   },
   getters: {},
   mutations: {
