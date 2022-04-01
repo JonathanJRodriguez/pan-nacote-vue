@@ -14,9 +14,11 @@ export default createStore({
       flavors: [],
       toppings: [],
       covers: [],
-      refImg: "",
+      printImg: "",
       toppingText: "",
       coverColor: "",
+      userDescription: "",
+      refImg: "",
       subtotalFlavors: 0,
       subtotalToppings: 0,
       subtotalCovers: 0,
@@ -108,7 +110,7 @@ export default createStore({
           selected: false,
         },
         {
-          name: "Combinado 3",
+          name: "Combinado 3+",
           qty: 10,
           price: 180,
           selected: false,
@@ -235,6 +237,13 @@ export default createStore({
     chefOption(state, chefOption) {
       state.order.chefOption = chefOption;
     },
+    checkFlavors(state, flavorsArray) {
+      state.order.flavors = flavorsArray;
+    },
+    flavorPrice(state, price) {
+      state.order.subtotalFlavors = price;
+      console.log(state.order.subtotalFlavors);
+    },
   },
   actions: {
     nameChange({ commit }, name) {
@@ -254,6 +263,27 @@ export default createStore({
     },
     chefOption({ commit }, chefOption) {
       commit("chefOption", chefOption);
+    },
+    checkFlavors({ commit }, flavorsArray) {
+      commit("checkFlavors", flavorsArray);
+    },
+    flavorPrice({ commit }, flavorArray) {
+      let qty = flavorArray.length;
+      let price = 0;
+      if (qty == 1) {
+        this.state.inventory.flavors.forEach((flavor) => {
+          if (flavor.name == flavorArray[0]) {
+            price = flavor.price;
+          }
+        });
+        commit("flavorPrice", price);
+      } else if (qty == 2) {
+        price = this.state.inventory.flavors[7].price;
+        commit("flavorPrice", price);
+      } else if (qty >= 3) {
+        price = this.state.inventory.flavors[8].price;
+        commit("flavorPrice", price);
+      }
     },
   },
   modules: {},

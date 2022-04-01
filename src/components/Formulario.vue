@@ -27,20 +27,7 @@
       <label for="chef3">Pastel Maruchan con coca</label><br />
     </div>
     <div v-if="tipoPedido === 'custom'">
-      <p>Elige el sabor de tu pan:</p>
-      <input type="checkbox" id="sabor1" name="sabor1" value="fresa" />
-      <label for="sabor1">Fresa</label><br />
-      <input type="checkbox" id="sabor2" name="sabor2" value="chocolate" />
-      <label for="sabor2">Chocolate</label><br />
-      <input type="checkbox" id="sabor3" name="sabor3" value="vainilla" />
-      <label for="sabor3">Vainilla</label><br />
-      <input type="checkbox" id="sabor4" name="sabor4" value="cajeta" />
-      <label for="sabor4">Cajeta</label><br />
-      <input type="checkbox" id="sabor5" name="sabor5" value="naranja" />
-      <label for="sabor5">Naranja</label><br />
-      <input type="checkbox" id="sabor6" name="sabor6" value="tresleches" />
-      <label for="sabor6">Tres Leches</label>
-      <br />
+      <flavor-mixer></flavor-mixer>
       <h3>Elige los adornos de tu pastel:</h3>
       <input type="checkbox" id="adorno1" name="adorno1" value="ch-chocolate" />
       <label for="adorno1">Chispas de chocolate</label><br />
@@ -106,8 +93,12 @@
 </template>
 
 <script>
+import FlavorMixer from "@/components/FlavorMixer.vue";
 export default {
   name: "FormularioMain",
+  components: {
+    FlavorMixer,
+  },
   data() {
     return {
       checked: true,
