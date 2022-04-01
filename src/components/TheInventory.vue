@@ -9,28 +9,28 @@
           <th>Unidades</th>
         </tr>
         <tr>
-          <td>Fresa</td>
-          <td>5</td>
+          <td>{{ $store.state.inventory.flavors[0].name }}</td>
+          <td>{{ $store.state.inventory.flavors[0].qty }}</td>
         </tr>
         <tr>
-          <td>Chocolate</td>
-          <td>10</td>
+          <td>{{ $store.state.inventory.flavors[1].name }}</td>
+          <td>{{ $store.state.inventory.flavors[1].qty }}</td>
         </tr>
         <tr>
-          <td>Vainilla</td>
-          <td>8</td>
+          <td>{{ $store.state.inventory.flavors[2].name }}</td>
+          <td>{{ $store.state.inventory.flavors[2].qty }}</td>
         </tr>
         <tr>
-          <td>Cajeta</td>
-          <td>11</td>
+          <td>{{ $store.state.inventory.flavors[3].name }}</td>
+          <td>{{ $store.state.inventory.flavors[3].qty }}</td>
         </tr>
         <tr>
-          <td>Naranja</td>
-          <td>7</td>
+          <td>{{ $store.state.inventory.flavors[4].name }}</td>
+          <td>{{ $store.state.inventory.flavors[4].qty }}</td>
         </tr>
         <tr>
-          <td>Tres Leches</td>
-          <td>2</td>
+          <td>{{ $store.state.inventory.flavors[5].name }}</td>
+          <td>{{ $store.state.inventory.flavors[5].qty }}</td>
         </tr>
       </table>
     </div>
@@ -42,36 +42,36 @@
           <th>Porciones</th>
         </tr>
         <tr>
-          <td>Chispas de chocolate</td>
-          <td>20</td>
+          <td>{{ $store.state.inventory.toppings[0].name }}</td>
+          <td>{{ $store.state.inventory.toppings[0].qty }}</td>
         </tr>
         <tr>
-          <td>Rebanadas de durazno</td>
-          <td>35</td>
+          <td>{{ $store.state.inventory.toppings[1].name }}</td>
+          <td>{{ $store.state.inventory.toppings[1].qty }}</td>
         </tr>
         <tr>
-          <td>Rebanadas de fresa</td>
-          <td>30</td>
+          <td>{{ $store.state.inventory.toppings[2].name }}</td>
+          <td>{{ $store.state.inventory.toppings[2].qty }}</td>
         </tr>
         <tr>
-          <td>Rebanadas de kiwi</td>
-          <td>28</td>
+          <td>{{ $store.state.inventory.toppings[3].name }}</td>
+          <td>{{ $store.state.inventory.toppings[3].qty }}</td>
         </tr>
         <tr>
-          <td>Rebanadas de cereza</td>
-          <td>16</td>
+          <td>{{ $store.state.inventory.toppings[4].name }}</td>
+          <td>{{ $store.state.inventory.toppings[4].qty }}</td>
         </tr>
         <tr>
-          <td>Hojuelas de chocolate</td>
-          <td>20</td>
+          <td>{{ $store.state.inventory.toppings[5].name }}</td>
+          <td>{{ $store.state.inventory.toppings[5].qty }}</td>
         </tr>
         <tr>
-          <td>Hojas de imagen personalizada</td>
-          <td>80</td>
+          <td>{{ $store.state.inventory.toppings[6].name }}</td>
+          <td>{{ $store.state.inventory.toppings[6].qty }}</td>
         </tr>
         <tr>
-          <td>Figurín de plástico</td>
-          <td>10</td>
+          <td>{{ $store.state.inventory.toppings[7].name }}</td>
+          <td>{{ $store.state.inventory.toppings[7].qty }}</td>
         </tr>
       </table>
     </div>
@@ -84,34 +84,34 @@
           <th>Unidades</th>
         </tr>
         <tr>
-          <td>Betún</td>
-          <td>10</td>
+          <td>{{ $store.state.inventory.covers[0].name }}</td>
+          <td>{{ $store.state.inventory.covers[0].qty }}</td>
           <td>Kg</td>
         </tr>
         <tr>
-          <td>Colorante azul</td>
-          <td>4</td>
-          <td>litros</td>
+          <td>{{ $store.state.inventory.foodDyes[0].name }}</td>
+          <td>{{ $store.state.inventory.foodDyes[0].qty }}</td>
+          <td>{{ $store.state.inventory.foodDyes[0].units }}</td>
         </tr>
         <tr>
-          <td>Colorante rojo</td>
-          <td>4</td>
-          <td>litros</td>
+          <td>{{ $store.state.inventory.foodDyes[1].name }}</td>
+          <td>{{ $store.state.inventory.foodDyes[1].qty }}</td>
+          <td>{{ $store.state.inventory.foodDyes[1].units }}</td>
         </tr>
         <tr>
-          <td>Colorante amarillo</td>
-          <td>4</td>
-          <td>litros</td>
+          <td>{{ $store.state.inventory.foodDyes[2].name }}</td>
+          <td>{{ $store.state.inventory.foodDyes[2].qty }}</td>
+          <td>{{ $store.state.inventory.foodDyes[2].units }}</td>
         </tr>
         <tr>
-          <td>Tinta impresora CMY</td>
-          <td>10</td>
-          <td>cartuchos</td>
+          <td>{{ $store.state.inventory.foodInk[0].name }}</td>
+          <td>{{ $store.state.inventory.foodInk[0].qty }}</td>
+          <td>{{ $store.state.inventory.foodInk[0].units }}</td>
         </tr>
         <tr>
-          <td>Tinta impresora negra</td>
-          <td>20</td>
-          <td>cartuchos</td>
+          <td>{{ $store.state.inventory.foodInk[1].name }}</td>
+          <td>{{ $store.state.inventory.foodInk[1].qty }}</td>
+          <td>{{ $store.state.inventory.foodInk[1].units }}</td>
         </tr>
       </table>
     </div>

@@ -1,22 +1,56 @@
 <template>
   <div>
-    <h3>Sugerencias del Pastelero</h3>
+    <h3>Ideas del Pastelero</h3>
     <dl>
-      <dt>Pastel sabor Rojo ................................... $175</dt>
-      <dd>
-        * Pan sabor fresa con betún color rojo pasión y rebanadas de fresa como
-        adornos.
-      </dd>
-      <dt>Pastel Vocho tuneado ................................... $240</dt>
-      <dd>
-        * Pan sabor naranja con betún verde chillón y una imagen del vocho
-        tuneado de tus sueños.
-      </dd>
-      <dt>Pastel Maruchan con coca ................................... $245</dt>
-      <dd>
-        * Pan sabor chocolate con betún blanco y una imagen de tu maruchan
-        favorita con frutas mixtas de adorno.
-      </dd>
+      <dt>
+        {{ $store.state.premadeCakes[0].name }}
+        ................................... ${{
+          $store.state.premadeCakes[0].price
+        }}
+      </dt>
+      <dd>*{{ $store.state.premadeCakes[0].description }}</dd>
+      <dt>
+        {{ $store.state.premadeCakes[1].name }}
+        ................................... ${{
+          $store.state.premadeCakes[1].price
+        }}
+      </dt>
+      <dd>*{{ $store.state.premadeCakes[1].description }}</dd>
+      <dt>
+        {{ $store.state.premadeCakes[2].name }}
+        ................................... ${{
+          $store.state.premadeCakes[2].price
+        }}
+      </dt>
+      <dd>*{{ $store.state.premadeCakes[2].description }}</dd>
+      <dt>
+        {{ $store.state.premadeCakes[3].name }}
+        ................................... ${{
+          $store.state.premadeCakes[3].price
+        }}
+      </dt>
+      <dd>*{{ $store.state.premadeCakes[3].description }}</dd>
+      <dt>
+        {{ $store.state.premadeCakes[4].name }}
+        ................................... ${{
+          $store.state.premadeCakes[4].price
+        }}
+      </dt>
+      <dd>*{{ $store.state.premadeCakes[4].description }}</dd>
+      <dt>
+        {{ $store.state.premadeCakes[5].name }}
+        ................................... ${{
+          $store.state.premadeCakes[5].price
+        }}
+      </dt>
+      <dd>*{{ $store.state.premadeCakes[5].description }}</dd>
+      <dt>
+        {{ $store.state.premadeCakes[6].name }}
+        ................................... ${{
+          $store.state.premadeCakes[6].price
+        }}
+      </dt>
+      <dd>*{{ $store.state.premadeCakes[6].description }}</dd>
     </dl>
   </div>
 </template>
