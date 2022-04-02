@@ -58,9 +58,7 @@ export default {
     checkFlavors: function (val) {
       if (val.length > 0) {
         this.$store.dispatch("checkFlavors", val);
-        if (val.length > 1 && val.length < 3) {
-          this.$store.dispatch("flavorPrice", val);
-        }
+        this.$store.dispatch("flavorPrice", val);
       }
     },
   },

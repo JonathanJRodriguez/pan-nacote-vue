@@ -20,11 +20,14 @@
     <div v-if="tipoPedido === 'sug-chef'">
       <p>Elige tu opción favorita:</p>
       <input type="radio" v-model="opcionPastel" value="chef1" />
-      <label for="chef1">Pastel sabor rojo</label><br />
+      <label for="chef1">{{ $store.state.premadeCakes[0].name }}</label
+      ><br />
       <input type="radio" v-model="opcionPastel" value="chef2" />
-      <label for="chef2">Pastel Vocho tuneado</label><br />
+      <label for="chef2">{{ $store.state.premadeCakes[1].name }}</label
+      ><br />
       <input type="radio" v-model="opcionPastel" value="chef3" />
-      <label for="chef3">Pastel Maruchan con coca</label><br />
+      <label for="chef3">{{ $store.state.premadeCakes[2].name }}</label
+      ><br />
     </div>
     <div v-if="tipoPedido === 'custom'">
       <flavor-mixer></flavor-mixer>

@@ -242,7 +242,6 @@ export default createStore({
     },
     flavorPrice(state, price) {
       state.order.subtotalFlavors = price;
-      console.log(state.order.subtotalFlavors);
     },
   },
   actions: {
@@ -278,10 +277,10 @@ export default createStore({
         });
         commit("flavorPrice", price);
       } else if (qty == 2) {
-        price = this.state.inventory.flavors[7].price;
+        price = this.state.inventory.flavors[6].price;
         commit("flavorPrice", price);
       } else if (qty >= 3) {
-        price = this.state.inventory.flavors[8].price;
+        price = this.state.inventory.flavors[7].price;
         commit("flavorPrice", price);
       }
     },
